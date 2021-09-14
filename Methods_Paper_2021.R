@@ -210,6 +210,13 @@ MAP<-sample_data(map)
 data<-merge_phyloseq(tax_final,otu_final,MAP)
 data
 
+
+####Can be used to add PPD column to sample data####
+#variable1 = sample_data(data)$Platform
+#variable2 = sample_data(data)$Pipeline
+#variable3 = sample_data(data)$Database
+#sample_data(data)$PPD <-  mapply(paste0, variable1, sep = "_", variable2, sep = "_", variable3)
+
 ##FILTER
 filter1 <- subset_taxa(data, Kingdom == "Bacteria" & Class != "Chloroplast" & Family != "mitochondria")
 filter1 <- subset_taxa(data, Kingdom != "Cyanobacteria/Chloroplast")
