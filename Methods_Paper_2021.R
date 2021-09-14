@@ -200,9 +200,16 @@ otu_g1<- as.data.frame(otu_table(g1))
 tax<-read.csv2("Edited_tax_table.csv", header = T)
 tax<-column_to_rownames(tax, "OTU")  
 tax<- as.matrix(tax)
+
 otu<-read.csv2("Edited_otu_table.csv", header = T)
 otu<-column_to_rownames(otu, "OTU")
-              
+
+mapfile = "Sample_data_all.csv"
+map <- read.csv2(mapfile)
+rownames(map) <- map$Sample_name
+map<-map[,-1]
+
+
 tax_final<-tax_table(tax)
 otu_final<- otu_table(otu, taxa_are_rows = TRUE)
 MAP<-sample_data(map)
