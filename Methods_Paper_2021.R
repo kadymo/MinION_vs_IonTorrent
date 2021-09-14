@@ -209,3 +209,7 @@ MAP<-sample_data(map)
 
 data<-merge_phyloseq(tax_final,otu_final,MAP)
 data
+
+##FILTER
+filter1 <- subset_taxa(data, Kingdom == "Bacteria" & Class != "Chloroplast" & Family != "mitochondria")
+filter1 <- subset_taxa(data, Kingdom != "Cyanobacteria/Chloroplast")
