@@ -275,7 +275,7 @@ res.aov <- aov(Shannon ~ tab, data = rich)
 summary(res.aov)
 lsmeans <- lsmeans(res.aov, 'tab')
 
-
+##should be adapted based on dataset
 contrasts <- list(
   "ONT_r_pipe" =c(0,0,0,0,-1,0,1,0),
   "IT_r_pipe" =c(-1,0,1,0,0,0,0,0),
