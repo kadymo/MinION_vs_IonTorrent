@@ -3,6 +3,10 @@ library(phyloseq)
 library("tidyverse") 
 library(plyr)
 library(vegan)
+#install.packages(c("devtools", "RcppEigen", "RcppParallel", "Rtsne", "ggforce", "units"))
+#devtools::install_github('schuyler-smith/phylosmith')
+library("phylosmith")
+
 
 setwd("~/Dropbox/MinION/Methods paper/R_analysis/Data_files/Phyloseq_objects")
 
