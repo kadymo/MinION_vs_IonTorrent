@@ -219,4 +219,4 @@ data
 
 ##FILTER
 filter1 <- subset_taxa(data, Kingdom == "Bacteria" & Class != "Chloroplast" & Family != "mitochondria")
-filter1 <- subset_taxa(data, Kingdom != "Cyanobacteria/Chloroplast")
+filter1 <- subset_taxa(data, Phylum != "Cyanobacteria/Chloroplast")
