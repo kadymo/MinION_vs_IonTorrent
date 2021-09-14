@@ -224,5 +224,4 @@ sample_data(data)$SP <-  mapply(paste0, variable1, sep = "_", variable2)
 
 
 ##FILTER
-data.1 <- subset_taxa(data, Kingdom == "Bacteria" & Class != "Chloroplast" & Family != "mitochondria")
-data.1 <- subset_taxa(data, Phylum != "Cyanobacteria/Chloroplast")
+data.1 <- subset_taxa(data, Kingdom == "Bacteria" & Class != "Chloroplast" & Family != "mitochondria" &  Phylum != "Cyanobacteria/Chloroplast")
