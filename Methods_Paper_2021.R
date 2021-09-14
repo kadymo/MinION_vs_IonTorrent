@@ -218,5 +218,5 @@ data
 #sample_data(data)$PPD <-  mapply(paste0, variable1, sep = "_", variable2, sep = "_", variable3)
 
 ##FILTER
-filter1 <- subset_taxa(data, Kingdom == "Bacteria" & Class != "Chloroplast" & Family != "mitochondria")
-filter1 <- subset_taxa(data, Phylum != "Cyanobacteria/Chloroplast")
+data.1 <- subset_taxa(data, Kingdom == "Bacteria" & Class != "Chloroplast" & Family != "mitochondria")
+data.1 <- subset_taxa(data, Phylum != "Cyanobacteria/Chloroplast")
