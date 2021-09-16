@@ -8,7 +8,8 @@ Samples come from three different marine waters:
 - Oudekraal (beach)
 - Muizenberg (surfzone)
 - IEP (shelf - cruise)
-- DNA standard (mock community)
+
+A DNA standard was used to benchmark (mock community)
 
 Sample numbers: ODK3b; ODK5b, ODK7b; ODK9a; ODK11b; ODK13b; (ODK15a - removed); ODK21b; AB1.2; N42; DNAs1; DNAs2
 
