@@ -67,6 +67,7 @@ RDP
 - treefile (tree.nwk)
 
 **Convert biom to txt**
+
 qiime biom convert -i feature-table.biom -o table-from-biom.txt --to-tsv
 
 # Importing into phyloseq
