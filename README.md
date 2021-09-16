@@ -1,7 +1,7 @@
 # MinION_methods
 
 # Project description
-The Oxford Nanopore MinION is one of the newer third generation sequencing technologies available, is significantly more affordable, more user friendly and results in much longer read lengths than its competitors. For this study, 16S amplicons were sequenced using both the Nanopore MinION and the Ion torrent S5 platforms. Two databases (SILVA & RDP) for taxonomic assignment and two common pipelines (QIIME & MOTHUR) were used for downstream analysis. The combinations of each were compared and assessed for their accuracy. 
+The Oxford Nanopore MinION is one of the newer third generation sequencing technologies available, is significantly more affordable, more user friendly and results in much longer read lengths than its competitors. For this study, 16S amplicons were sequenced using both the Nanopore MinION and the Ion torrent S5 platforms. Two databases (SILVA & RDP) for taxonomic assignment and two common pipelines (QIIME & MOTHUR) were used for downstream analysis. The combinations of each were compared and assessed for their accuracy and coverage. 
 
 # Samples used
 Samples come from three different marine waters:
