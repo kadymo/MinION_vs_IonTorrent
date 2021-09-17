@@ -39,7 +39,7 @@ RDP
 # Data processing
 **Raw sequences produced (fastq)**
 
-**Quality control**
+**Quality control - ONT**
 1. qcat on all barcodes (each run done separately) to trim adapters and barcodes: qcat -f input.fastq --trim -b output_folder
 2. Select relevant barcodes/samples
 3. Get quality reads (each run done separately): NanoFilt -q 10 -l 1300 --maxlength 1600
