@@ -24,7 +24,7 @@ Run 2 (FAN-41723): AB1.2; N42; DNAs2
 
 Run 1: ODK3b; ODK5b, ODK7b; ODK9a; (ODK11b - removed); ODK13b; ODK15a; ODK21b; AB1.2; N42; DNAs1; DNAs2
 
-# Pipleines used
+# Pipelines used
 QIIME
 
 MOTHUR
