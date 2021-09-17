@@ -52,12 +52,12 @@ RDP
 3. ran degap.seqs() on good.align file
 
 **Dereplicate, remove chimeras & cluster**
-1. Using Qiime (separately for each barcode V4 = V4_sample_script.sh | Full length = ONT_FL_script.sh)
+1. Using Qiime (separately for each barcode V4 = ONT_V4_sample_{database}.sh | Full length = ONT_FL_{database}.sh)
 2. Using mothur
 
 **Assign taxonomy (as part of script above)**
-1. SILVA
-2. RDP
+1. SILVA (separately for each barcode V4 = ONT_V4_sample_S.sh | Full length = ONT_FL_S.sh)
+2. RDP (separately for each barcode V4 = ONT_V4_sample_R.sh | Full length = ONT_FL_R}.sh)
 
 **Output files**
 - biom (.biom)
