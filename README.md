@@ -34,8 +34,6 @@ SILVA
 
 RDP
 
-# End samples for analysis
-
 # Data processing
 **Raw sequences produced (fastq)**
 
@@ -44,7 +42,7 @@ RDP
 2. Select relevant barcodes/samples
 3. Get quality reads (each run done separately): NanoFilt -q 10 -l 1300 --maxlength 1600
 
-**File organization**
+**File organization = ONT V4**
 1. Fastq files converted into .fasta using seqtk
 2. Sequence names relabeled in each sample with samplename+number (script by Kat – bash script with sed)
 
@@ -54,10 +52,10 @@ RDP
 3. ran degap.seqs() on good.align file
 
 **Dereplicate, remove chimeras & cluster**
-1. Using Qiime
+1. Using Qiime (separately for each barcode V4 = V4_sample_script.sh | Full length = ONT_FL_script.sh)
 2. Using mothur
 
-**Assign taxonomy**
+**Assign taxonomy (as part of script above)**
 1. SILVA
 2. RDP
 
@@ -68,6 +66,6 @@ RDP
 
 **Convert biom to txt**
 
-qiime biom convert -i feature-table.biom -o table-from-biom.txt --to-tsv
+in qiime: biom convert -i feature-table.biom -o table-from-biom.txt --to-tsv
 
 # Importing into phyloseq
