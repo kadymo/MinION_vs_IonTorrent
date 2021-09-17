@@ -44,7 +44,7 @@ RDP
 
 **File organization = for ONT V4**
 1. Fastq files converted into .fasta using seqtk
-2. Sequence names relabeled in each sample with samplename+number (script by Kat – bash script with sed)
+2. Sequence names relabeled in each sample with samplename+number (script by Kat – relabel_seqs.sh)
 
 **Select V4 region**
 1. ran Batch script 1
