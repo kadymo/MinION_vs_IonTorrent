@@ -34,19 +34,19 @@ SILVA
 
 RDP
 
-# Data processing
+# Data processing - ONT
 **Raw sequences produced (fastq)**
 
-**Quality control - ONT**
+**Quality control**
 1. qcat on all barcodes (each run done separately) to trim adapters and barcodes: qcat -f input.fastq --trim -b output_folder
 2. Select relevant barcodes/samples
 3. Get quality reads (each run done separately): NanoFilt -q 10 -l 1300 --maxlength 1600
 
-**File organization = ONT V4**
+**File organization = for ONT V4**
 1. Fastq files converted into .fasta using seqtk
 2. Sequence names relabeled in each sample with samplename+number (script by Kat – bash script with sed)
 
-**Select V4 region - for ONT only**
+**Select V4 region**
 1. ran Batch script 1
 2. ran Batch script 2
 3. ran degap.seqs() on good.align file
@@ -67,5 +67,7 @@ RDP
 **Convert biom to txt**
 
 in qiime: biom convert -i feature-table.biom -o table-from-biom.txt --to-tsv
+
+# Data processing - IT
 
 # Importing into phyloseq
