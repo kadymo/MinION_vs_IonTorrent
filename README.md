@@ -60,11 +60,12 @@ RDP (vxx)
 2. RDP (separately for each barcode V4 = ONT_V4_sample_R.sh | Full length = ONT_FL_RDP.sh)
 
 **Output files**
-1.Mothur
+
+1. Mothur
 - taxonomy(.taxonomy)
 - count (.count_table)
 
-2.Qiime
+2. Qiime
 - biom (.biom)
 - taxonomy (.tsv)
 - treefile (tree.nwk)
