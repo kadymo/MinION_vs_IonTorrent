@@ -5,9 +5,9 @@ The Oxford Nanopore MinION is one of the newer third generation sequencing techn
 
 # Samples used
 Samples come from three different marine waters:
-- Oudekraal (beach, designation ODK)
-- Muizenberg (surfzone, designation AB)
-- IEP (shelf - cruise, designation N)
+- Oudekraal (beach, label ODK)
+- Muizenberg (surfzone, label AB)
+- IEP (shelf - cruise, label N)
 
 A DNA standard was used to benchmark (mock community)
 
