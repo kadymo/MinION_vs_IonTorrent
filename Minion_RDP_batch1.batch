@@ -1,0 +1,3 @@
+
+classify.seqs(fasta=Minion_mothur.unique.good.filter.unique.precluster.fasta, count=Minion_mothur.unique.good.filter.unique.precluster.count_table, reference=trainset18_062020.rdp.fasta, taxonomy=trainset18_062020.rdp.tax, cutoff=75, probs=F)
+

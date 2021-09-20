@@ -1,0 +1,8 @@
+merge.files(input=ODK3b_new.fasta-ODK5b_new.fasta-ODK7b_new.fasta-ODK9a_new.fasta-ODK11b_new.fasta-ODK13b_new.fasta-ODK15a_new.fasta-ODK21b_new.fasta-ODK36c_new.fasta-DNAs1_new.fasta-DNAs2_new.fasta-AB1_new.fasta-N42_new.fasta, output=Minion_mothur.fasta)
+make.group(fasta=ODK3b_new.fasta-ODK5b_new.fasta-ODK7b_new.fasta-ODK9a_new.fasta-ODK11b_new.fasta-ODK13b_new.fasta-ODK15a_new.fasta-ODK21b_new.fasta-ODK36c_new.fasta-DNAs1_new.fasta-DNAs2_new.fasta-AB1_new.fasta-N42_new.fasta,groups=ODK3b-ODK5b-ODK7b-ODK9a-ODK11b-ODK13b-ODK15a-ODK21b-ODK36a-DNAs1-DNAs2-AB1-N42)
+summary.seqs(fasta=Minion_mothur.fasta)
+unique.seqs(fasta=Minion_mothur.fasta)
+count.seqs(name=Minion_mothur.names, group=merge.groups)
+summary.seqs(count=Minion_mothur.count_table)
+align.seqs(fasta=Minion_mothur.unique.fasta, reference=silva.v4.align, flip =T)
+summary.seqs(fasta=Minion_mothur.unique.align)

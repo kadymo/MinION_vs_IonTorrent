@@ -1,0 +1,7 @@
+screen.seqs(fasta=Minion_mothur.unique.align, summary=Minion_mothur.unique.summary, count=Minion_mothur.count_table, start=1, end=13425, maxhomop=8)
+filter.seqs(fasta=Minion_mothur.unique.good.align, vertical=T, trump=.)
+unique.seqs(fasta=Minion_mothur.unique.good.filter.fasta, count=Minion_mothur.good.count_table)
+pre.cluster(fasta=Minion_mothur.unique.good.filter.unique.fasta, count=Minion_mothur.unique.good.filter.count_table, diffs=20)
+classify.seqs(fasta=Minion_mothur.unique.good.filter.unique.precluster.fasta, count=Minion_mothur.unique.good.filter.unique.precluster.count_table, reference=silva.seed_v132.align, taxonomy=silva.seed_v132.tax, cutoff=75, probs=F)
+count=Minion_mothur.unique.good.filter.unique.precluster.count_table, reference=silva.seed_v132.align, taxonomy=silva.seed_v132.tax, cutoff=75, probs=F)
+
