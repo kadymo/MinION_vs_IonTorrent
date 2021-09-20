@@ -25,7 +25,7 @@ Run 2 (FAN-41723): AB1.2; N42; DNAs2
 Run 1: ODK3b; ODK5b, ODK7b; ODK9a; (ODK11b - removed); ODK13b; ODK15a; ODK21b; ODK36a; AB1.2; N42; DNAs1; DNAs2
 
 # Pipelines used
-QIIME (v2020.8)
+QIIME2 (v2020.8)
 
 MOTHUR (vxx)
 
@@ -65,12 +65,12 @@ RDP (vxx)
 - taxonomy(.taxonomy)
 - count (.count_table)
 
-2. Qiime
+2. Qiime2
 - biom (.biom)
 - taxonomy (.tsv)
 - treefile (tree.nwk)
 
-**Convert biom to txt**
+**Convert biom to txt - for Qiime2**
 
 in qiime: biom convert -i feature-table.biom -o table-from-biom.txt --to-tsv
 
