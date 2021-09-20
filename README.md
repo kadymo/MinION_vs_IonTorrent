@@ -22,7 +22,7 @@ Run 2 (FAN-41723): AB1.2; N42; DNAs2
 
 **IT - Ion Torrent (Ion Chef Instrument, templating kits Ion 510 amp, Ion 52 amp, and Ion 530 Kit – Chef)**
 
-Run 1: ODK3b; ODK5b, ODK7b; ODK9a; (ODK11b - removed); ODK13b; ODK15a; ODK21b; AB1.2; N42; DNAs1; DNAs2
+Run 1: ODK3b; ODK5b, ODK7b; ODK9a; (ODK11b - removed); ODK13b; ODK15a; ODK21b; ODK36a; AB1.2; N42; DNAs1; DNAs2
 
 # Pipelines used
 QIIME
