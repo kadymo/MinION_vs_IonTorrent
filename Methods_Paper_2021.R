@@ -222,11 +222,11 @@ data<-merge_phyloseq(tax_final,otu_final,MAP)
 data
 
 
-####Can be used to add PPD column to sample data####
-#variable1 = sample_data(data)$Platform
-#variable2 = sample_data(data)$Pipeline
-#variable3 = sample_data(data)$Database
-#sample_data(data)$PPD <-  mapply(paste0, variable1, sep = "_", variable2, sep = "_", variable3)
+##PPD column added to sample data####
+variable1 = sample_data(data)$Platform
+variable2 = sample_data(data)$Pipeline
+variable3 = sample_data(data)$Database
+sample_data(data)$PPD <-  mapply(paste0, variable1, sep = "_", variable2, sep = "_", variable3)
 
 ## SP column added to sample data####
 variable1 = sample_data(data)$Sample_original
@@ -237,6 +237,20 @@ sample_data(data)$SP <-  mapply(paste0, variable1, sep = "_", variable2)
 variable1 = sample_data(data)$Sample_original
 variable2 = sample_data(data)$Database
 sample_data(data)$SD <-  mapply(paste0, variable1, sep = "_", variable2)
+
+## PRP column added to sample data####
+variable1 = sample_data(data)$Platform
+variable2 = sample_data(data)$Region
+variable3 = sample_data(data)$Pipeline
+sample_data(data)$PRP <-  mapply(paste0, variable1, sep = "_", variable2, sep = "_", variable3)
+
+## PRPD column added to sample data####
+variable1 = sample_data(data)$Platform
+variable2 = sample_data(data)$Region
+variable3 = sample_data(data)$Pipeline
+variable4 = sample_data(data)$Database
+sample_data(data)$PRPD <- mapply(paste0, variable1, sep = "_", variable2, sep = "_", variable3, sep = "_", variable4)
+
 
 ##FILTER
 data.1 <- subset_taxa(data, Kingdom == "Bacteria" & Class != "Chloroplast" & Family != "mitochondria" &  Phylum != "Cyanobacteria/Chloroplast")
