@@ -233,6 +233,10 @@ variable1 = sample_data(data)$Sample_original
 variable2 = sample_data(data)$Platform
 sample_data(data)$SP <-  mapply(paste0, variable1, sep = "_", variable2)
 
+## SD column added to sample data####
+variable1 = sample_data(data)$Sample_original
+variable2 = sample_data(data)$Database
+sample_data(data)$SD <-  mapply(paste0, variable1, sep = "_", variable2)
 
 ##FILTER
 data.1 <- subset_taxa(data, Kingdom == "Bacteria" & Class != "Chloroplast" & Family != "mitochondria" &  Phylum != "Cyanobacteria/Chloroplast")
