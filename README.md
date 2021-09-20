@@ -76,3 +76,23 @@ in qiime: biom convert -i feature-table.biom -o table-from-biom.txt --to-tsv
 # Data processing - IT
 
 # Importing into phyloseq
+Impoting table-from-biom.txt and taxonomy.tsv for each sample
+
+**Before importing we need to fix file headers to be readable into R**
+
+To do this follow the following commands in terminal/unix environment:
+
+sed -i -e "1d" *.txt
+
+sed -i -e "s/ //" *.txt
+
+sed -i -e "s/#OTUID/OTUID/" *.txt
+
+sed -i -e "s/#OTUID/OTUID/" *.tsv
+
+**Data import into R**
+
+Use the data_importer.R function called in the script importing_data.R
+
+**Making phyloseq objects**
+Create phyloseq object using the script data_to_phyloseq.R
