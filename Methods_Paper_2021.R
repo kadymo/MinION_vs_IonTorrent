@@ -10,30 +10,7 @@ library("phylosmith")
 
 setwd("~/Dropbox/MinION/Methods paper/R_analysis/Data_files/Phyloseq_objects")
 
-###Mothur sum taxa####
-ont_r_m_combine<-read.csv2("ONT_R_m_combine.csv")
-ont_r_m_combine.1<- ddply(ont_r_m_combine,"Taxonomy",numcolwise(sum))
-ont_r_m_combine.2  <- separate(ont_r_m_combine.1, Taxonomy, into = c("Kingdom", "Phylum", "Class", "Order", "Family", "Genus", "Species"), sep=",", fill="right")
-#write.csv2(ont_r_m_combine.2, "ont_r_m_combine.2.csv")
-
-IT_S_m_combine<-read.csv2("IT_S_m_combine.csv")
-IT_S_m_combine.1<- ddply(IT_S_m_combine,"Taxonomy",numcolwise(sum))
-IT_S_m_combine.2  <- separate(IT_S_m_combine.1, Taxonomy, into = c("Kingdom", "Phylum", "Class", "Order", "Family", "Genus", "Species"), sep=";", fill="right")
-#write.csv2(IT_S_m_combine.2, "IT_S_m_combine.2.csv")
-
-
-ONT_S_m_combine<-read.csv2("ONT_S_m_combine.csv")
-ONT_S_m_combine.1<- ddply(ONT_S_m_combine,"Taxonomy",numcolwise(sum))
-ONT_S_m_combine.2  <- separate(ONT_S_m_combine.1, Taxonomy, into = c("Kingdom", "Phylum", "Class", "Order", "Family", "Genus", "Species"), sep=",", fill="right")
-#write.csv2(ONT_S_m_combine.2, "ONT_S_m_combine.2.csv")
-
-IT_R_m_combine<-read.csv2("IT_R_m_combine.csv")
-IT_R_m_combine.1<- ddply(IT_R_m_combine,"Taxonomy",numcolwise(sum))
-IT_R_m_combine.2  <- separate(IT_R_m_combine.1, Taxonomy, into = c("Kingdom", "Phylum", "Class", "Order", "Family", "Genus", "Species"), sep=";", fill="right")
-#write.csv2(IT_R_m_combine.2, "IT_R_m_combine.2.csv")
-
-
-###MinION####
+###MinION upload####
 
 #Mothur_Silva
 TAXfile="ONT_S_m_tax.csv"
