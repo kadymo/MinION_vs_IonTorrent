@@ -25,14 +25,14 @@ Run 2 (FAN-41723): AB1.2; N42; DNAs2
 Run 1: ODK3b; ODK5b, ODK7b; ODK9a; (ODK11b - removed); ODK13b; ODK15a; ODK21b; ODK36a; AB1.2; N42; DNAs1; DNAs2
 
 # Pipelines used
-QIIME
+QIIME (v2020.8)
 
-MOTHUR
+MOTHUR (vxx)
 
 # Databases used
-SILVA
+SILVA (vxx)
 
-RDP
+RDP (vxx)
 
 # Data processing - ONT
 **Raw sequences produced (fastq)**
@@ -46,9 +46,9 @@ RDP
 1. Fastq files converted into .fasta using seqtk
 2. Sequence names relabeled in each sample with samplename+number (script by Kat – relabel_seqs.sh)
 
-**Select V4 region**
-1. ran Batch script 1
-2. ran Batch script 2
+**Select V4 region in Mothur**
+1. ran MinION_Batch1.batch
+2. ran MinION_Batch2.batch
 3. ran degap.seqs() on good.align file
 
 **Dereplicate, remove chimeras & cluster**
