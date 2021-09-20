@@ -11,12 +11,12 @@ Samples come from three different marine waters:
 
 A DNA standard was used to benchmark (mock community)
 
-Sample numbers: ODK3b; ODK5b, ODK7b; ODK9a; (ODK11b - removed); ODK13b; ODK15a; ODK21b; AB1.2; N42; DNAs1; DNAs2
+Sample numbers: ODK3b; ODK5b, ODK7b; ODK9a; (ODK11b - removed); ODK13b; ODK15a; ODK21b; ODK36a; AB1.2; N42; DNAs1; DNAs2
 
 # Platforms used
 **ONT - MinION sequencing (flow cells chemistry R9.4.1)**
 
-Run 1 (FAN-53765): ODK3b; ODK5b, ODK7b; ODK9a; (ODK11b - removed); ODK13b; ODK15a; ODK21b; DNAs1 
+Run 1 (FAN-53765): ODK3b; ODK5b, ODK7b; ODK9a; (ODK11b - removed); ODK13b; ODK15a; ODK21b; ODK36a; DNAs1 
 
 Run 2 (FAN-41723): AB1.2; N42; DNAs2
 
