@@ -30,11 +30,11 @@ QIIME2 (v2020.8)
 MOTHUR (vxx)
 
 # Databases used
-SILVA (vxx)
+SILVA (Release 132)
 
-RDP (vxx)
+RDP (Version 18)
 
-# Data processing - ONT
+# ONT
 **Raw sequences produced (fastq)**
 
 **Quality control**
@@ -76,8 +76,26 @@ in qiime: biom convert -i feature-table.biom -o table-from-biom.txt --to-tsv
 
 # Data processing - IT
 
+**Quality & length filtering**
+1. usearch run on all barcodes: -fastq_filter in.fastq -fastq_trunclen 150 -fastq_maxee 1 -fastq_qmax 47 \
+    -fastqout out.fastq
+2. Convert fastq to fasta: sedtk seq -a in.fastq.gz > out.fasta
+
+**Pick out V4 amplicons**
+1. Align reads to the Silva Database using Mothur: align.seqs(candidate=in.fasta, template=silva.seed_v132.align, flip=t).
+2. Open the .align.report file, and assign V region by binning reads based on strat and stop coordinates from the Mothur alignment.
+3. In Mothur use get.seqs to extract all seqs binned into the V4 region (get.seqs(accnos=V4_S.txt, fasta=S.fasta).
+
+**QIIME2 analysis**
+1) Each fasta file corresponding to each sample was run through then QIIME2_SILVA.sh & QIIME2_RDP.sh scripts
+2) Biom files were processed as described below:
+
+**MOTHUR analysis**
+1. All fasta files were run through MOTHUR_SILVA.batch and MOTHUR_RDP.batch 
+
+
 # Importing into phyloseq
-Impoting table-from-biom.txt and taxonomy.tsv for each sample
+Importing table-from-biom.txt and taxonomy.tsv for each sample
 
 **Before importing we need to fix file headers to be readable into R**
 
