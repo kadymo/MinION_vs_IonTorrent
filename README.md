@@ -95,4 +95,5 @@ sed -i -e "s/#OTUID/OTUID/" *.tsv
 Use the data_importer.R function called in the script importing_data.R
 
 **Making phyloseq objects**
+
 Create phyloseq object using the script data_to_phyloseq.R
