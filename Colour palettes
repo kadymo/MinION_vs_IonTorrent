@@ -1,0 +1,2 @@
+Database_colours <- list(Database = c(RDP = "#22499C", SILVA= "#BF8AB2"))
+platform_region_colour <- list(PR = c(IT_V4 = "#80A4D8", ONT_V4 = "#AAD794", ONT_V4="#FAD37B"))
