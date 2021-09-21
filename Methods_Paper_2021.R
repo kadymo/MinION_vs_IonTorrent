@@ -230,7 +230,8 @@ sample_data(data)$PRPD <- mapply(paste0, variable1, sep = "_", variable2, sep = 
 
 
 ##FILTER
-data.1 <- subset_taxa(data, Kingdom == "Bacteria" & Class != "Chloroplast" & Family != "mitochondria" &  Phylum != "Cyanobacteria/Chloroplast")
+data.1 <- subset_taxa(data, Kingdom == "Bacteria" & Class != "Chloroplast" & Order != "Chloroplast" & Family != "mitochondria" &  Phylum != "Cyanobacteria/Chloroplast")
+
 
 ##add standard separation column
 variable1 = sample_data(data.1)$Location
