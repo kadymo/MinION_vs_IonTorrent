@@ -991,6 +991,7 @@ tax.41.12<-tax.41.11%>%
 
 ####Find duplicates####
 
+#Update TAX with latest chnaged tax above to determine if there are duplicates in the file. Theoretically if no duplicates are found then sample names match correctly across taxa.
 TAX<-tax.41.12
 
 #write.csv2(TAX,"Edited_tax_table.csv" )
