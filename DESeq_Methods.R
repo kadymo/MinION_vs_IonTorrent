@@ -86,9 +86,8 @@ deseq_sigQS <- differential_abundance(physeqQS, grouping_column = "Platform", ou
 
 #QR:
 data3QR <- subset_taxa(Data.1.3.QR, Genus != "Unclassified_XXXXX")
+data3QR <- subset_taxa(data3QR, Genus != "Mitochondria_X")
 data3QR <- subset_taxa(Data.1.3.QR, Genus != "Unclassified")
-data3QR <- subset_taxa(data3QR, Genus != "Chloroplast_XX")
-data3QR <- subset_taxa(data3QR, Genus != "Chloroplast_uncultured.marine.eukaryote_X")
 data4QR = tax_glom(data3QR, "Genus")
 #prune to top 15 taxa:
 Genus15QR = prune_taxa(names(sort(taxa_sums(data4QR), TRUE))[1:15], data4QR)
@@ -119,6 +118,10 @@ otu_table(Genus15MR) <- t(otu_table(Genus15MR))
 physeqMR<- taxa_level(Genus15MR, "Genus")
 deseq_sigMR <- differential_abundance(physeqMR, grouping_column = "Platform", output_norm = NULL, pvalue.threshold = 0.05, lfc.threshold = 0, filename = F)
 
+#create colour palette:
+Database_colours <- list(Database = c(RDP = "#22499C", SILVA= "#BF8AB2"))
+platform_region_colour <- list(PR = c(IT_V4 = "#80A4D8", ONT_V4 = "#AAD794", ONT_V4="#FAD37B"))
+
 #To generate a plot showing differentially abundant taxa between among compared groups , 
 #corresponding adjusted p-values and rank of importance as detected by random forest classifier:
 #QR:
@@ -126,8 +129,11 @@ p_QR<-plot_signif(deseq_sigQR$plotdata, top.taxa = 20)
 print(p_QR)
 plot_MDA(deseq_sigQR$importance, top.taxa=20)
 #logfold change:
-p_QR <- plot_MA(deseq_sigQR$SignFeaturesTable, label=T)
+p_QR <- plot_MA(deseq_sigQR$SignFeaturesTable, label=F)
 QR <- print(p_QR$lfcplot)
+QR <- QR + theme(legend.position = "none") + scale_fill_manual(values=c("#80A4D8","#AAD794")) + coord_flip()
+QR <- QR + coord_flip()
+QR
 
 #QS:
 p_QS<-plot_signif(deseq_sigQS$plotdata, top.taxa = 20)
@@ -136,6 +142,9 @@ plot_MDA(deseq_sigQS$importance, top.taxa=20)
 #logfold change:
 p_QS <- plot_MA(deseq_sigQS$SignFeaturesTable, label=T)
 QS <- print(p_QS$lfcplot)
+QS <- QS + theme(legend.position = "none") + scale_fill_manual(values=c("#80A4D8","#AAD794")) + coord_flip()
+QS <- QS + coord_flip()
+QS
 
 #MR:
 p_MR<-plot_signif(deseq_sigMR$plotdata, top.taxa = 20)
@@ -144,6 +153,9 @@ plot_MDA(deseq_sigMR$importance, top.taxa=20)
 #logfold change:
 p_MR <- plot_MA(deseq_sigMR$SignFeaturesTable, label=T)
 MR <- print(p_MR$lfcplot)
+MR <- MR + theme(legend.position = "none") + scale_fill_manual(values=c("#80A4D8","#AAD794")) + coord_flip()
+MR <- MR + coord_flip()
+MR
 
 #MS:
 p_MS<-plot_signif(deseq_sigMS$plotdata, top.taxa = 20)
@@ -152,6 +164,9 @@ plot_MDA(deseq_sigMS$importance, top.taxa=20)
 #logfold change:
 p_MS <- plot_MA(deseq_sigMS$SignFeaturesTable, label=T, main="MOTHUR | SILVA")
 MS <- print(p_MS$lfcplot)
+MS <- MS + theme(legend.position = "none") + scale_fill_manual(values=c("#80A4D8","#AAD794")) + coord_flip()
+MS <- MS + coord_flip()
+MS
 
 # 4 figures arranged in 2 rows and 2 columns
 
