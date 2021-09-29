@@ -9,7 +9,7 @@ load("~/Desktop/UCT projects/Oudekraal/Methods paper/R/DESeq.RData")
 
 #Data prep:
 
-#Grab Phyla:
+#Grab Phyla (Data.1.3 has DNAs and ONT V4 regions removed):
 gp.Bact = subset_taxa(Data.1.3, Phylum == "Bacteroidetes")
 
 sample_data(gp.Bact)
