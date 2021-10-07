@@ -1,6 +1,6 @@
 Database_colours <- list(Database = c(RDP = "#22499C", SILVA= "#BF8AB2"))
 platform_region_colour <- list(PR = c(IT_V4 = "#80A4D8", ONT_FL = "#AAD794", ONT_V4="#FAD37B"))
-
+Pipeline_colours <- list(Pipeline = c(MOTHUR = "#F8D068", QIIME= "#207890"))
 
 install.packages('palettetown')
 library(palettetown)
