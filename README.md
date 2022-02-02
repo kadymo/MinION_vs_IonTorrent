@@ -1,7 +1,7 @@
 # MinION_methods
 
 # Project description
-The Oxford Nanopore MinION is one of the newer third generation sequencing technologies available, is significantly more affordable, more user friendly and results in much longer read lengths than its competitors. For this study, 16S amplicons were sequenced using both the Nanopore MinION (ONT) and the Ion torrent S5 (IT) platforms. Two databases (SILVA & RDP) for taxonomic assignment and two common pipelines (QIIME & MOTHUR) were used for downstream analysis. The combinations of each were compared and assessed for their accuracy and coverage. We compared the 16S amplicons: IT-V4; ONT-V4; & ONT-FL (full-length).
+The Oxford Nanopore MinION is one of the newer third generation sequencing technologies available, is significantly more affordable, more user friendly and results in much longer read lengths than its competitors. For this study, 16S amplicons were sequenced using both the Nanopore MinION (ONT) and the Ion torrent S5 (IT) platforms. Two databases (SILVA & RDP) for taxonomic assignment and two common pipelines (QIIME & MOTHUR) were used for downstream analysis. The combinations of each were compared and assessed for their accuracy and coverage. We compared the 16S amplicons: IT-V4 & ONT-FL (full-length).
 
 # Samples used
 Samples come from three different marine waters:
@@ -27,10 +27,10 @@ Run 1: ODK3b; ODK5b, ODK7b; ODK9a; (ODK11b - removed); ODK13b; ODK15a; ODK21b; O
 # Pipelines used
 QIIME2 (v2020.8)
 
-MOTHUR (vxx)
+Emu
 
 # Databases used
-SILVA (Release 132)
+SILVA (Release 132 and 138)
 
 RDP (Version 18)
 
@@ -41,15 +41,6 @@ RDP (Version 18)
 1. qcat on all barcodes (each run done separately) to trim adapters and barcodes: qcat -f input.fastq --trim -b output_folder
 2. Select relevant barcodes/samples
 3. Get quality reads (each run done separately): NanoFilt -q 10 -l 1300 --maxlength 1600
-
-**File organization = for ONT V4**
-1. Fastq files converted into .fasta using seqtk
-2. Sequence names relabeled in each sample with samplename+number (script by Kat – relabel_seqs.sh)
-
-**Select V4 region in Mothur**
-1. ran MinION_Batch1.batch
-2. ran MinION_Batch2.batch
-3. ran degap.seqs() on good.align file
 
 **Dereplicate, remove chimeras & cluster**
 1. Using Qiime (separately for each barcode V4 = ONT_V4_sample_{database}.sh | Full length = ONT_FL_{database}.sh)
